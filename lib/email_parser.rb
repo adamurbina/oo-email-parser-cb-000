@@ -5,10 +5,13 @@
 
 class EmailParser
 
+attr_accessor :emails
+
 def parse(emails)
-    return_array = []
+    @return_array = []
     parsed = emails.split(/[,\s]/)
-    parsed.uniq.reject{|elem| elem == ""}
+    @return_array = parsed.uniq.reject{|elem| elem == ""}
 end
 
 end
+s
