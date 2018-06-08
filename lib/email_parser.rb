@@ -8,7 +8,7 @@ class EmailParser
 def parse(emails)
     return_array = []
     parsed = emails.split(/[,\s]/)
-    parsed.drop_while{|elem| elem == "" || elem.count > 1 }
+    parsed.uniq.reject{|elem| elem == ""}
 end
 
 end
