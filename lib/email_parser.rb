@@ -7,11 +7,10 @@ class EmailParser
 
 attr_accessor :emails
 
-def parse(emails)
-    @return_array = []
-    parsed = emails.split(/[,\s]/)
-    @return_array = parsed.uniq.reject{|elem| elem == ""}
+def parse(input)
+
+    parsed = input.split(/[,\s]/)
+    @emails = parsed.uniq.reject{|elem| elem == ""}
 end
 
 end
-s
